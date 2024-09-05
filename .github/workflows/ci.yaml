@@ -27,9 +27,7 @@ jobs:
         host: "103.245.39.44"
         username: "root"
         password: "l0calh0st"
-    - name : dockercompose down 
-      working-directory: ./daud-erlangga/test_js
-      run : docker compose down
-    - name : dockercompose up
-      working-directory: ./daud-erlangga/test_js
-      run : docker compose up
+        script: |
+            cd ~/daud-erlangga/test_js
+            docker compose down
+            docker compose up
