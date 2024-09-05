@@ -23,7 +23,8 @@ jobs:
     needs: test
     steps:
     - name: ssh
-    ssh root@103.245.39.44
-    cd daud-erlangga/test_js
-    docker compose down
-    docker compose up
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: "103.245.39.44"
+        username: "root"
+        password: "l0calh0st"
