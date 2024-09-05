@@ -30,4 +30,4 @@ jobs:
         script: |
             cd ~/daud-erlangga/test_js
             docker compose down
-            docker compose up
+            docker compose up -d
